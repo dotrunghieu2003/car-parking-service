@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  spring-app:
+    image: openjdk:11-jdk
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Map Spring Boot app port to host
+    expose:
+      - 8080
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432" # Map PostgreSQL port to host
+    expose:
+      - 5432
+    environment:
+      POSTGRES_DB: db_car_parking
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres@123
