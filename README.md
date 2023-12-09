@@ -23,7 +23,7 @@ Short description or overview of the project.
 
     ```bash
     cd your-project-directory
-    mvn clean package
+    mvn clean install
     ```
 
 ### Running the Application with Docker Compose
