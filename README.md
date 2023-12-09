@@ -45,8 +45,3 @@ To stop the application, run:
 ```bash
 docker-compose down
 
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgements
-
-Mention any acknowledgments or credits for resources, inspiration, etc.
