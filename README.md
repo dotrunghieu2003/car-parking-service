@@ -4,9 +4,10 @@ Short description or overview of the project.
 
 ## Prerequisites
 
-- Java (version X.X)
-- Maven (version X.X)
-- [Optional] Docker (version X.X) if the project uses Docker
+- Java (version 11)
+- Maven build tool
+- Docker 
+- Docker Compose (version '3.8')
 
 ## Getting Started
 
@@ -25,38 +26,24 @@ Short description or overview of the project.
     mvn clean package
     ```
 
-### Running the Application
+### Running the Application with Docker Compose
 
-1. Run the Spring Boot application:
+1. Ensure Docker and Docker Compose are installed.
+
+2. Start the application using Docker Compose:
 
     ```bash
-    mvn spring-boot:run
+    docker-compose up --build
     ```
 
-2. Access the application at: http://localhost:8080
+3. Access the application at:http://localhost:8080/api/v1/carparks/nearest?latitude=34570.2904&longitude=41861.2936&page=1&per_page=10
 
-### Configuration (if applicable)
+### Stopping the Application
 
-Describe any configuration steps or environment variables needed.
+To stop the application, run:
 
-## Usage
-
-Provide information on how to use or interact with the application or its endpoints.
-
-## API Documentation (if applicable)
-
-Include details about API endpoints, request/response formats, etc.
-
-## Development
-
-Describe any additional details useful for developers:
-
-- Technologies used
-- Project structure
-- Guidelines for contributing
-- etc.
-
-## License
+```bash
+docker-compose down
 
 This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
 
