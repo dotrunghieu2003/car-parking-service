@@ -5,9 +5,48 @@ Short description or overview of the project.
 ## Prerequisites
 
 - Java (version 11)
+- Spring Boot (2.4.5)
 - Maven build tool
-- Docker 
+- Docker
+   ```bash
+    FROM openjdk:11-jdk
+
+    WORKDIR /app
+    
+    COPY target/car-parking-service-1.0.jar app.jar
+    
+    ENTRYPOINT ["java", "-jar", "app.jar"]
+   ```
+  
 - Docker Compose (version '3.8')
+   ```bash
+ version: '3.8'
+
+services:
+  spring-app:
+    image: openjdk:11-jdk
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Map Spring Boot app port to host
+    expose:
+      - 8080
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432" # Map PostgreSQL port to host
+    expose:
+      - 5432
+    environment:
+      POSTGRES_DB: db_car_parking
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres@123
+    ```
 
 ## Getting Started
 
