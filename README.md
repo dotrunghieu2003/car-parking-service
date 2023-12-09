@@ -141,10 +141,6 @@ Short description or overview of the project.
 
  ```
 
-Check Database migration using flyway
- ```bash
-![image](https://github.com/dotrunghieu2003/car-parking-service/assets/22995357/b9712137-571a-40fe-82c9-069c3baf379d)
- ```
 
 3. Access the application :http://localhost:8080/api/v1/carparks/nearest?latitude=34570.2904&longitude=41861.2936&page=1&per_page=10
   ```bash
