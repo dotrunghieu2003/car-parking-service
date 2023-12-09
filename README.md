@@ -130,7 +130,7 @@ Short description or overview of the project.
         "distance_kilometers": 1022.2969974992985
     }
 ]
-    ```
+```
 
 ### Stopping the Application
 
