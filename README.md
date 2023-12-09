@@ -74,7 +74,7 @@ Short description or overview of the project.
     docker-compose up --build
     ```
 
-3. Access the application at:http://localhost:8080/api/v1/carparks/nearest?latitude=34570.2904&longitude=41861.2936&page=1&per_page=10
+3. Access the application :http://localhost:8080/api/v1/carparks/nearest?latitude=34570.2904&longitude=41861.2936&page=1&per_page=10
   ```bash
    [
     {
@@ -169,7 +169,16 @@ Short description or overview of the project.
     }
 ]
 ```
-
+4. Access the application: http://localhost:8080/api/v1/carparks/nearest?longitude=41861.2936&page=1&per_page=10
+   ```bash
+      {
+       "timestamp": "2023-12-09T08:08:48.984+00:00",
+       "status": 400,
+       "error": "Bad Request",
+       "message": "",
+       "path": "/api/v1/carparks/nearest"
+      }
+   ```
 ### Stopping the Application
 
 To stop the application, run:
